@@ -1,0 +1,41 @@
+@charset "UTF-8";
+
+/*:root {}*/
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  background: rgb(228, 177, 177);
+}
+
+.voc-paragraph {
+  margin-top: 100px;
+}
+
+.input-div {
+  margin-top: 100px;
+  margin-bottom: 50px;
+}
+
+.resultado-div {
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  margin-top: 20px;
+  color: #888;
+  border-radius: 5px;
+}
+
+.resultado-div p {
+  margin: 25px;
+}
+
+.favoritar-button,
+.remover-button {
+  display: none;
+}
