@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vocabulário.com</title>
+  <!-- CSS do Bootstrap via CDN -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+  <div class="container">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="#">Vocabulário.com</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <button class="btn btn-primary" id="palavras-favoritas" data-toggle="modal"
+              data-target="#modalPalavrasFavoritas">Palavras Favoritas</button>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <h1 class="voc-paragraph">Vocabulário.com</h1>
+    <div class="row justify-content-center input-div">
+      <div class="col-md-6 mt-5">
+        <div class="input-group">
+          <input type="text" class="form-control input" placeholder="Livro...">
+          <div class="input-group-append">
+            <button class="btn btn-primary" type="button" id="buscar-palavra">Pesquisar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <div class="resultado-div" id="resultado">
+          <p>Tipo de palavra: <span class="text-secondary">substantivo masculino</span></p>
+          <p>Significados: <span class="text-secondary">Conjunto de folhas impressas e reunidas em volume encadernado ou
+              brochado., Obra em prosa ou verso, de qualquer extensão, disponibilizada em qualquer meio ou suporte:
+              livro
+              bem escrito; [...]</span></p>
+          <p>Etimologia: <span class="text-secondary">Etimologia (origem da palavra livro). Do latim liber.bri.</span>
+          </p>
+        </div>
+        <a href="#" class="btn btn-primary mt-3 favoritar-button">Favoritar</a>
+        <a href="#" class="btn btn-danger mt-3 remover-button">Remover</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Palavras Favoritas -->
+  <div class="modal fade" id="modalPalavrasFavoritas" tabindex="-1" role="dialog" aria-labelledby="modalTitle"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalTitle">Palavras Favoritas</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body" id="palavrasFavoritasList"></div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
