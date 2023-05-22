@@ -37,10 +37,19 @@ function realizarBusca() {
 
   // Faz a requisição à API
   fetch(url)
-    .then(response => response.json())
+    .then(response => {
+      if (response.status === 400) {
+        alert(palavra + ' não encontrada');
+        // Limpa o input e restaura a DIV de busca ao estado inicial
+        inputPalavra.value = '';
+        resultadoDiv.innerHTML = '';
+        favoritarButton.style.display = 'none';
+        removerButton.style.display = 'none';
+
+      }
+      return response.json();
+    })
     .then(data => {
-      // Limpa o conteúdo anterior da div de resultado
-      resultadoDiv.innerHTML = '';
 
       // Cria os elementos para exibir o resultado
       data.forEach(item => {
