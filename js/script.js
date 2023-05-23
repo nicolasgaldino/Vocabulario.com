@@ -40,16 +40,13 @@ function realizarBusca() {
     .then(response => {
       if (response.status === 400) {
         alert(palavra + ' não encontrada');
-        // Limpa o input e restaura a DIV de busca ao estado inicial
-        inputPalavra.value = '';
-        resultadoDiv.innerHTML = '';
-        favoritarButton.style.display = 'none';
-        removerButton.style.display = 'none';
-
+        location.reload();
       }
       return response.json();
     })
     .then(data => {
+      // Limpa o conteúdo anterior da div de resultado
+      resultadoDiv.innerHTML = '';
 
       // Cria os elementos para exibir o resultado
       data.forEach(item => {

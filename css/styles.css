@@ -38,4 +38,5 @@ body {
 .favoritar-button,
 .remover-button {
   display: none;
+  margin-bottom: 25px;
 }
