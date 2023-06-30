@@ -33,7 +33,7 @@ function realizarBusca() {
   const palavra = input.value;
 
   // Monta a URL da API com a palavra digitada
-  const url = `https://dicio-api-ten.vercel.app/v2/${palavra}`;
+  const url = `https://dicio-api-ten.vercel.app/v2/${palavra}/`;
 
   // Faz a requisição à API
   fetch(url)
